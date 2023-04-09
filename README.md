@@ -1,4 +1,4 @@
-# Web fundamentals workshop (with Svelte!)
+# Web basics with Svelte
 
 Beginner Svelte workshop for FullyHacks 2023!
 
