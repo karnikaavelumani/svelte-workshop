@@ -2,36 +2,50 @@
 
 Beginner Svelte workshop for FullyHacks 2023!
 
-TODO: Remark about https://formdata.deno.dev/.
+## Background
 
-## Outline
+### What is this workshop about?
 
-### Background
+This workshop is about web development. Web development is the process of creating websites and web applications. Web development is a broad term that encompasses many different technologies and skills. This workshop will focus on the fundamentals of web development, specifically the fundamentals of Svelte.
 
-- What is this workshop about?
-- What is web development? (What is a website?)
-  - What languages are understood by the browser?
-  - Why are frameworks/libraries used?
-- What is Svelte?
-  - Svelte vs React
-- Workshop steps
+### What is web development? (What is a website?)
 
-<!-- TODO: Convert background outline into background. -->
+A website is a collection of files that are served to a web browser. The web browser is a program that interprets the files and displays the website to the user. The web browser is the most common way to view websites, but websites can also be viewed in other ways, such as in a web application.
+
+#### What languages are understood by the browser?
+
+The browser understands HTML, CSS, and JavaScript. HTML is used to structure the content of a website. CSS is used to style the content of a website. JavaScript is used to add interactivity to a website.
+
+> NOTE: The browser also understands SVG and WebAssembly, but these are not covered in this workshop.
+
+#### Why are frameworks/libraries so prevalent in web development?
+
+Frameworks and libraries are used to reduce the amount of code that needs to be written. This is done by providing a set of pre-written code that can be used to solve common problems. This allows developers to focus on the unique aspects of their project instead of having to write the same code over and over again.
+
+### What is Svelte?
+
+Svelte is a compiler that compiles Svelte code into optimized HTML, CSS, and JavaScript. The Svelte compiler is a powerful tool that allows developers to write code that is easy to read and write, but is also optimized for the browser.
+
+> NOTE: SvelteKit is a full-stack solution for Svelte, but this workshop will focus on using the Svelte compiler to learn HTML fundamentals and Svelte syntax.
+
+#### Svelte vs React
+
+Svelte is a compiler for building web interfaces, while React is a library. Svelte compiles components into optimized JavaScript code, resulting in smaller bundle sizes, faster load times, and efficient DOM updates, making it a more optimal choice for performance-oriented web applications. However, React has a larger ecosystem of libraries and community support.
 
 ### Workshop steps
 
 #### Open a Svelte development environment
 
-##### VSCode steps
+##### Set up VSCode
 
 - Open a new SvelteKit project in VSCode in high-contrast mode.
 - Run `npm run dev` to start the development server.
 - Open the preview in your browser.
 
-##### Svelte REPL steps
+##### Set up Svelte REPL
 
 - Open a new Svelte REPL (https://svelte.dev/repl/).
-- Sign in to the Svelte REPL to save your work.
+- Sign in to the Svelte REPL to save your work. Remember to save often! SAVE SAVE SAVE!
 
 #### HTML introduction
 
@@ -45,7 +59,7 @@ Hello world!
 
 Svelte adds _syntax sugar_ to
 
-##### The HTML tag
+#### The HTML tag
 
 In addition to plain text, HTML tags are used to add structure to a web page.
 
@@ -63,7 +77,7 @@ Ignore lines of code by using the HTML comment tag. In most code editors, the ke
 <!-- Hello world! -->
 ```
 
-###### Common HTML tags and semantics
+#### Common HTML tags and semantics
 
 HTML is a format that contains rich semantic information. Semantic HTML is HTML that is used to convey intended meaning to the browser (and to readers of your code).
 
@@ -77,10 +91,14 @@ Add a paragraph to your HTML document using the `p` tag.
 
 Line breaks are added to your HTML document using the `br` tag.
 
-> Note: `p` tags cannot be nested inside of other `p` tags (i.e. a `p` tag cannot be the child of another `p` tag). It is generally not immediately clear why some elements are invalid to nest inside of other elements, but it is important to follow the rules of HTML by referencing the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) when in doubt.
+> NOTE: `p` tags cannot be nested inside of other `p` tags (i.e. a `p` tag cannot be the child of another `p` tag). It is generally not immediately clear why some elements are invalid to nest inside of other elements, but it is important to follow the rules of HTML by referencing the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) when in doubt.
+
+> NOTE: A comment is used in the example below as a placeholder for the irrelevant HTML code.
 
 ```html
 <h1>Hello world!</h1>
+
+<!-- <p> and <br> spam -->
 
 <p>Hello world!</p>
 ```
@@ -88,8 +106,6 @@ Line breaks are added to your HTML document using the `br` tag.
 Some elements are responsible for behaviors that you'd expect from a web page, such as links and forms.
 
 Add a link to your HTML document using the `a` tag.
-
-A comment is used in the example below as a placeholder for the irrelevant HTML code.
 
 ```html
 <h1>Hello world!</h1>
@@ -128,9 +144,55 @@ Hyperlink to anywhere on the Internet by setting the `href` to your desired web 
 <a href="https://acmcsuf.com/">The best programmers</a>
 ```
 
-<!-- TODO: CSS introduction -->
+Add an image to your HTML document using the `img` tag using the `src` attribute to set the image source and the `alt` attribute to set the image's alternative text.
 
-###### More HTML tags
+> NOTE: The `alt` attribute is used to provide a textual description of the image. This is useful for users who are unable to view the image, such as users who are visually impaired. Generally, carefully choosing the proper semantic HTML tag and attributes will be the difference between a good user experience and a great user experience.
+
+```html
+<!-- Previous content -->
+
+<img
+  src="https://fullyhacks.acmcsuf.com/fullyhacks_logo.png"
+  alt="FullyHacks logo"
+/>
+```
+
+#### CSS introduction
+
+Svelte looks for CSS in the `style` tag in your Svelte file.
+
+```html
+<style>
+  /* CSS goes here */
+</style>
+```
+
+##### Selectors
+
+CSS selectors are used to select the HTML elements that you want to style.
+
+For example, the `h1` selector is used to select all `h1` elements.
+
+```html
+<style>
+  h1 {
+    color: red;
+  }
+</style>
+```
+
+Share CSS styles between multiple HTML elements by using a comma-separated list of selectors.
+
+```html
+<style>
+  h1,
+  p {
+    color: rebeccapurple;
+  }
+</style>
+```
+
+#### More HTML tags
 
 Lists are a common way to display information in a structured way.
 
@@ -185,7 +247,7 @@ HTML even supports _nested lists_ which can be in any combination of `ul` and `o
 </ul>
 ```
 
-> Note: Anchor tags are commonly used in `li` elements to make tables of contents.
+> NOTE: Anchor tags are commonly used in `li` elements to make tables of contents.
 
 HTML even supports [_tables_](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics) of all shapes and sizes.
 
@@ -224,6 +286,8 @@ HTML forms are a common way to collect user input.
 
 Add a form to your HTML document using the `form` tag.
 
+> NOTE: Presenter opens <https://formdata.deno.dev/> in a new tab to demonstrate how forms are used to store user input.
+
 ```html
 <!-- Previous content -->
 
@@ -258,22 +322,120 @@ Add a form to your HTML document using the `form` tag.
 </form>
 ```
 
-> Note: For a more comprehensive introduction to conventional HTML
-> document structure, see
-> <https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure>.
+Similarly to anchor tags, forms can be submitted to a web address. Instead of the `href` attribute, the `action` attribute is used to specify the web address. The `method` attribute is used to specify the HTTP method.
+
+```html
+<!-- Previous content -->
+
+<form action="https://formdata.deno.dev/" method="POST">
+  <!-- Your form content -->
+</form>
+```
+
+> NOTE: For a more comprehensive introduction to conventional HTML document structure, see <https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure>.
 
 #### Svelte superpowers
 
-We emphasize the "super" when we say "Svelte is a **super**set of HTML" because Svelte adds a few new features to HTML that make it even more powerful.
+We emphasize the "super" when we say "Svelte is a **superset** of HTML" because Svelte adds a few new features to HTML that make it even more powerful.
 
-##### Reactive variables
+##### Conditionals
 
-#####
+You may want to display different content depending on the state of your application. For example, you may want to display a loading indicator while data is being fetched from a web API.
 
-<!-- TODO: Finish the workshop instructions. -->
-<!-- See: https://docs.google.com/presentation/d/1j6c6BZIb-0TCCQosohfreKOx8gXAubCppsJ4fJelSzY/edit#slide=id.g162a3bacc13_0_63 -->
-<!-- See: https://docs.google.com/presentation/d/1aL7-3iEPinHcYkvjaNu-0zrAxy7EP86xN7U1jvEqfaI/edit#slide=id.g22bc14e53fc_0_21 -->
+```svelte
+<script>
+  let isHappy = false;
 
-<!-- ## References
+  function toggleHappiness() {
+    isHappy = !isHappy;
+  }
+</script>
 
-- https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure -->
+<button on:click={toggleHappiness}>
+  {#if isHappy}
+    😊
+  {:else}
+    😞
+  {/if}
+</button>
+```
+
+##### Reactive statements
+
+Svelte allows you to write code that reacts to changes in your application. For example, you may want to change the title of your document depending on the state of your application. The reactive statement is denoted by the `$:` prefix and is run whenever the variables it depends on change. In this case, the `isHappy` variable is used in the reactive statement, so the statement is run whenever the `isHappy` variable changes.
+
+```svelte
+<script>
+  let isHappy = false;
+
+  function toggleHappiness() {
+    isHappy = !isHappy;
+  }
+
+  $: if (isHappy) {
+    document.title = "😊";
+  } else {
+    document.title = "😞";
+  }
+</script>
+
+<button on:click={toggleHappiness}>
+  {#if isHappy}
+    😊
+  {:else}
+    😞
+  {/if}
+</button>
+```
+
+##### Repeating code
+
+It is common to repeat code in HTML documents. For example, you may want to display a list of items. Instead of writing out each item individually, you can use a loop to repeat the code for each item.
+
+```svelte
+<script>
+  const items = ["🎉", "🎈", "🎊"];
+</script>
+
+<ul>
+  {#each items as item}
+    <li>{item}</li>
+  {/each}
+</ul>
+```
+
+More information about loops can be found in the [`{#each ...}` template syntax documentation](https://svelte.dev/docs#template-syntax-each).
+
+##### Svelte components
+
+Svelte components are reusable pieces of code that can be used to build complex user interfaces.
+
+> EXERCISE: Make a new Svelte file ending with `.svelte` and grab any valid Svelte code. For example, abstract your HTML form into a Svelte component.
+
+##### Svelte stores
+
+Svelte stores are reactive JavaScript variables that can be written to and read from any frontend file in your application.
+
+> EXERCISE: Make a JavaScript file ending with `.js` and use the `writable` function to create a new Svelte store.
+
+```js
+import { writable } from "svelte/store";
+
+export const count = writable(0);
+```
+
+##### Honorable mentions
+
+- [Svelte actions](https://svelte.dev/docs#template-syntax-element-directives-use-action)
+- [Svelte slots](https://svelte.dev/docs#template-syntax-slot)
+- [Svelte transitions](https://svelte.dev/docs#run-time-svelte-transition)
+- [SvelteKit documentation](https://kit.svelte.dev/docs)
+
+## References
+
+- https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
+- https://kit.svelte.dev/docs
+
+---
+
+Written with <3 for [**FullyHacks**](https://fullyhacks.acmcsuf.com/)
