@@ -26,7 +26,7 @@ Frameworks and libraries are used to reduce the amount of code that needs to be 
 
 Svelte is a compiler that compiles Svelte code into optimized HTML, CSS, and JavaScript. The Svelte compiler is a powerful tool that allows developers to write code that is easy to read and write, but is also optimized for the browser.
 
-> NOTE: SvelteKit is a full-stack solution for Svelte, but this workshop will focus on using the Svelte compiler to learn HTML fundamentals and Svelte syntax.
+> NOTE: SvelteKit is a full-stack solution for Svelte (comparable to Next.js, Nuxt.js, and Remix), but this workshop will focus on using the Svelte compiler to learn HTML fundamentals and Svelte syntax.
 
 #### Svelte vs React
 
@@ -38,7 +38,7 @@ Svelte is a compiler for building web interfaces, while React is a library. Svel
 
 ##### Set up VSCode
 
-- Open a new SvelteKit project in VSCode in high-contrast mode.
+- Open a new SvelteKit project (`npm create svelte@latest my-app`) in VSCode in high-contrast mode.
 - Run `npm run dev` to start the development server.
 - Open the preview in your browser.
 
@@ -56,8 +56,6 @@ All valid HTML is valid Svelte, including plain text.
 ```html
 Hello world!
 ```
-
-Svelte adds _syntax sugar_ to
 
 #### The HTML tag
 
@@ -188,6 +186,22 @@ Share CSS styles between multiple HTML elements by using a comma-separated list 
   h1,
   p {
     color: rebeccapurple;
+  }
+</style>
+```
+
+##### Properties
+
+CSS properties are used to style HTML elements.
+
+For example, the `color` property is used to set the color of the text. You are encouraged to reference the [named CSS colors](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color#standard_colors).
+
+There are many CSS properties that can be used to style HTML elements. For a full list of CSS properties, refer to the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference).
+
+```html
+<style>
+  h1 {
+    text-align: center;
   }
 </style>
 ```
