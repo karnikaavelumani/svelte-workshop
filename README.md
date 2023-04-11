@@ -10,7 +10,9 @@ This workshop is about web development. Web development is the process of creati
 
 ### What is web development? (What is a website?)
 
-A website is a collection of files that are served to a web browser. The web browser is a program that interprets the files and displays the website to the user. The web browser is the most common way to view websites, but websites can also be viewed in other ways, such as in a web application.
+A website is a collection of files that are served to a web browser. The web browser is a program that interprets the files and displays the website to the user. The web browser is the most common way to view websites, so it is important to learn what is compatible with the web browser your users are using.
+
+> NOTE: It is also important to learn how to read and understand documentation, such as the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). MDN has [a standard format for tables that illustrate compatibility of shared technologies across all browsers](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables), such as DOM, HTML, CSS, JavaScript, SVG, etc.
 
 #### What languages are understood by the browser?
 
@@ -36,15 +38,18 @@ Svelte is a compiler for building web interfaces, while React is a library. Svel
 
 #### Open a Svelte development environment
 
+Either set up your Svelte development environment locally with SvelteKit (recommended: VSCode) or the official online Svelte REPL.
+
 ##### Set up VSCode
 
 - Open a new SvelteKit project (`npm create svelte@latest my-app`) in VSCode in high-contrast mode.
+- (Optional) Move files from `/my-app/` to the root of your repository.
 - Run `npm run dev` to start the development server.
 - Open the preview in your browser.
 
 ##### Set up Svelte REPL
 
-- Open a new Svelte REPL (https://svelte.dev/repl/).
+- Open a new Svelte REPL (<https://svelte.dev/repl/>).
 - Sign in to the Svelte REPL to save your work. Remember to save often! SAVE SAVE SAVE!
 
 #### HTML introduction
@@ -70,8 +75,6 @@ For example, add a heading to your HTML document using the `h1` tag.
 Ignore lines of code by using the HTML comment tag. In most code editors, the keyboard shortcut is <kbd>Ctrl</kbd> + <kbd>/</kbd>.
 
 ```html
-<!-- <h1>Hello world!</h1> -->
-
 <!-- Hello world! -->
 ```
 
@@ -83,6 +86,11 @@ For example, the `h1` tag is used to indicate the most important heading on a pa
 
 ```html
 <h1>Hello world!</h1>
+<h2>Hello world!</h2>
+<h3>Hello world!</h3>
+<h4>Hello world!</h4>
+<h5>Hello world!</h5>
+<h6>Hello world!</h6>
 ```
 
 Add a paragraph to your HTML document using the `p` tag.
@@ -215,8 +223,6 @@ Add an _unordered list_ to your HTML document using the `ul` tag.
 This showcases the parent-child relationship between HTML elements. Notice how the `ul` element is the parent of the `li` elements, making the `li` elements children of the `ul` element.
 
 ```html
-<!-- Previous content -->
-
 <ul>
   <li>Hello world!</li>
   <li>Hello world!</li>
@@ -227,8 +233,6 @@ This showcases the parent-child relationship between HTML elements. Notice how t
 Add an _ordered list_ to your HTML document using the `ol` tag.
 
 ```html
-<!-- Previous content -->
-
 <ul>
   <li>Hello world!</li>
   <li>Hello world!</li>
@@ -245,8 +249,6 @@ Add an _ordered list_ to your HTML document using the `ol` tag.
 HTML even supports _nested lists_ which can be in any combination of `ul` and `ol` tags.
 
 ```html
-<!-- Previous content -->
-
 <ul>
   <li>
     Hello world!
@@ -263,48 +265,47 @@ HTML even supports _nested lists_ which can be in any combination of `ul` and `o
 
 > NOTE: Anchor tags are commonly used in `li` elements to make tables of contents.
 
-HTML even supports [_tables_](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics) of all shapes and sizes.
+[HTML tables](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics) are a common way to display information of all shapes and sizes in a structured way.
 
 ```html
-<!-- Previous content -->
-
 <table>
-  <thead>
-    <tr>
-      <th>Column 1</th>
-      <th>Column 2</th>
-      <th>Column 3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Row 1, Column 1</td>
-      <td>Row 1, Column 2</td>
-      <td>Row 1, Column 3</td>
-    </tr>
-    <tr>
-      <td>Row 2, Column 1</td>
-      <td>Row 2, Column 2</td>
-      <td>Row 2, Column 3</td>
-    </tr>
-    <tr>
-      <td>Row 3, Column 1</td>
-      <td>Row 3, Column 2</td>
-      <td>Row 3, Column 3</td>
-    </tr>
-  </tbody>
+  <tr>
+    <td>Row 1, Column 1</td>
+    <td>Row 1, Column 2</td>
+  </tr>
+  <tr>
+    <td>Row 2, Column 1</td>
+    <td>Row 2, Column 2</td>
+  </tr>
 </table>
 ```
 
-HTML forms are a common way to collect user input.
+Collect user input in HTML using the [`input` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
 
-Add a form to your HTML document using the `form` tag.
+```html
+<input type="text" />
+```
+
+Customize your input element with more attributes.
+
+> NOTE: There are several [HTML5 input types](https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types).
+
+```html
+<input
+  type="text"
+  value="Hello world!"
+  placeholder="Enter your name"
+  maxlength="64"
+  pattern="[a-zA-Z0-9]+"
+  required
+/>
+```
+
+Group your inputs in an HTML form. Add a form to your HTML document using the [`form` element](https://developer.mozilla.org/en-US/docs/Learn/Forms).
 
 > NOTE: Presenter opens <https://formdata.deno.dev/> in a new tab to demonstrate how forms are used to store user input.
 
 ```html
-<!-- Previous content -->
-
 <form>
   <label for="name">Name</label>
   <input type="text" id="name" name="name" />
@@ -339,8 +340,6 @@ Add a form to your HTML document using the `form` tag.
 Similarly to anchor tags, forms can be submitted to a web address. Instead of the `href` attribute, the `action` attribute is used to specify the web address. The `method` attribute is used to specify the HTTP method.
 
 ```html
-<!-- Previous content -->
-
 <form action="https://formdata.deno.dev/" method="POST">
   <!-- Your form content -->
 </form>
@@ -374,7 +373,7 @@ You may want to display different content depending on the state of your applica
 </button>
 ```
 
-##### Reactive statements
+##### Reactivity statements
 
 Svelte allows you to write code that reacts to changes in your application. For example, you may want to change the title of your document depending on the state of your application. The reactive statement is denoted by the `$:` prefix and is run whenever the variables it depends on change. In this case, the `isHappy` variable is used in the reactive statement, so the statement is run whenever the `isHappy` variable changes.
 
@@ -386,11 +385,13 @@ Svelte allows you to write code that reacts to changes in your application. For 
     isHappy = !isHappy;
   }
 
-  $: if (isHappy) {
-    document.title = "😊";
-  } else {
-    document.title = "😞";
-  }
+	let count = 0;
+
+	$: {
+		if (isHappy) {
+			count++;
+		}
+	}
 </script>
 
 <button on:click={toggleHappiness}>
@@ -400,6 +401,8 @@ Svelte allows you to write code that reacts to changes in your application. For 
     😞
   {/if}
 </button>
+
+{count}
 ```
 
 ##### Repeating code
@@ -426,11 +429,19 @@ Svelte components are reusable pieces of code that can be used to build complex 
 
 > EXERCISE: Make a new Svelte file ending with `.svelte` and grab any valid Svelte code. For example, abstract your HTML form into a Svelte component.
 
+Import your Svelte component into another Svelte file.
+
+```svelte
+<script>
+  import Form from "./Form.svelte";
+</script>
+```
+
 ##### Svelte stores
 
 Svelte stores are reactive JavaScript variables that can be written to and read from any frontend file in your application.
 
-> EXERCISE: Make a JavaScript file ending with `.js` and use the `writable` function to create a new Svelte store.
+> EXERCISE: Make a JavaScript file ending with `.js` and use the `writable` function to create a new Svelte store. Doing so allows you to access the store in any frontend file in your application.
 
 ```js
 import { writable } from "svelte/store";
@@ -438,18 +449,32 @@ import { writable } from "svelte/store";
 export const count = writable(0);
 ```
 
+Access Svelte stores by importing them from the file where they are defined.
+
+```svelte
+<script>
+  // Assuming your store is exported as `count` from `stores.js`
+  import { count } from "./stores";
+</script>
+```
+
 ##### Honorable mentions
+
+Svelte and SvelteKit have a lot of features that we didn't have time to cover. Here are some honorable mentions:
 
 - [Svelte actions](https://svelte.dev/docs#template-syntax-element-directives-use-action)
 - [Svelte slots](https://svelte.dev/docs#template-syntax-slot)
 - [Svelte transitions](https://svelte.dev/docs#run-time-svelte-transition)
 - [SvelteKit documentation](https://kit.svelte.dev/docs)
 
-## References
+## Self learning references
 
-- https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-- https://kit.svelte.dev/docs
+- [Introduction to HTML by MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
+- [Svelte tutorial](https://svelte.dev/tutorial/basics)
+- [Svelte documentation](https://svelte.dev/docs)
 
 ---
 
-Written with <3 for [**FullyHacks**](https://fullyhacks.acmcsuf.com/)
+Presented at [**FullyHacks**](https://fullyhacks.acmcsuf.com/) (April 8th, 2023) with `<3` by [_ACM at CSUF_](https://acmcsuf.com/) president [**@KarnikaaVelumani**](https://karni.codes/) and vice president [**@EthanThatOneKid**](https://etok.codes/)
+
+Self link: <https://acmcsuf.com/basics>
