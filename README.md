@@ -375,7 +375,7 @@ You may want to display different content depending on the state of your applica
 
 ##### Reactivity statements
 
-Svelte allows you to write code that reacts to changes in your application. For example, you may want to change the title of your document depending on the state of your application. The reactive statement is denoted by the `$:` prefix and is run whenever the variables it depends on change. In this case, the `isHappy` variable is used in the reactive statement, so the statement is run whenever the `isHappy` variable changes.
+Svelte allows you to write code that reacts to changes in your application. For example, you may want to change the title of your document depending on the state of your application. The reactive statement is denoted by the `$:` prefix and is run whenever the variables it depends on change. In this case, the `isHappy` variable is used in the reactive statement, so the statement is run whenever the `isHappy` variable changes. Code outside of the reactive statement is run once when the component is first rendered.
 
 ```svelte
 <script>
@@ -385,13 +385,13 @@ Svelte allows you to write code that reacts to changes in your application. For 
     isHappy = !isHappy;
   }
 
-	let count = 0;
+  let count = 0;
 
-	$: {
-		if (isHappy) {
-			count++;
-		}
-	}
+  $: {
+    if (isHappy) {
+      count++;
+    }
+  }
 </script>
 
 <button on:click={toggleHappiness}>
