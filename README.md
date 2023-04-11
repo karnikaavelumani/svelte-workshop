@@ -435,6 +435,8 @@ Import your Svelte component into another Svelte file.
 <script>
   import Form from "./Form.svelte";
 </script>
+
+<Form />
 ```
 
 ##### Svelte stores
