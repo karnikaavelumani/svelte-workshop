@@ -12,7 +12,7 @@ This workshop is about web development. Web development is the process of creati
 
 A website is a collection of files that are served to a web browser. The web browser is a program that interprets the files and displays the website to the user. The web browser is the most common way to view websites, so it is important to know the compatibility of the technologies you are using with the web browser that your users are using.
 
-> NOTE: It is also important to learn how to read and understand documentation, such as the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). MDN has [a standard format for tables that illustrate compatibility of shared technologies across all browsers](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables), such as DOM, HTML, CSS, JavaScript, SVG, etc.
+> NOTE: It is also important to learn how to read and understand documentation, such as the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). MDN has [a standard format for tables that illustrate compatibility of shared technologies across all browsers](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 
 #### What languages are understood by the browser?
 
