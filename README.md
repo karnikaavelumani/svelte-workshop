@@ -508,6 +508,6 @@ We hope you had a great time learning the basics of web development with Svelte 
 
 ---
 
-Presented at [**FullyHacks**](https://fullyhacks.acmcsuf.com/) (April 8th, 2023) with `<3` by [_ACM at CSUF_](https://acmcsuf.com/) president [**@KarnikaaVelumani**](https://karni.codes/) and vice president [**@EthanThatOneKid**](https://etok.codes/)
+Presented at [**FullyHacks**](https://fullyhacks.acmcsuf.com/) (April 8th, 2023) with `<3` by [_ACM at CSUF_](https://acmcsuf.com/) President [**@KarnikaaVelumani**](https://karni.codes/) and Vice President [**@EthanThatOneKid**](https://etok.codes/)
 
 Self link: <https://acmcsuf.com/basics>
