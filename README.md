@@ -10,7 +10,7 @@ This workshop is about web development. Web development is the process of creati
 
 ### What is web development? (What is a website?)
 
-A website is a collection of files that are served to a web browser. The web browser is a program that interprets the files and displays the website to the user. The web browser is the most common way to view websites, so it is important to learn what is compatible with the web browser your users are using.
+A website is a collection of files that are served to a web browser. The web browser is a program that interprets the files and displays the website to the user. The web browser is the most common way to view websites, so it is important to know the compatibility of the technologies you are using with the web browser that your users are using.
 
 > NOTE: It is also important to learn how to read and understand documentation, such as the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). MDN has [a standard format for tables that illustrate compatibility of shared technologies across all browsers](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables), such as DOM, HTML, CSS, JavaScript, SVG, etc.
 
@@ -26,7 +26,7 @@ Frameworks and libraries are used to reduce the amount of code that needs to be 
 
 ### What is Svelte?
 
-Svelte is a compiler that compiles Svelte code into optimized HTML, CSS, and JavaScript. The Svelte compiler is a powerful tool that allows developers to write code that is easy to read and write, but is also optimized for the browser.
+Svelte is a powerful tool that compiles Svelte code into optimized HTML, CSS, and JavaScript, making it easy for developers to write efficient code. The Svelte compiler is a powerful tool that allows developers to write code that is easy to read and write, but is also optimized for the browser.
 
 > NOTE: SvelteKit is a full-stack solution for Svelte (comparable to Next.js, Nuxt.js, and Remix), but this workshop will focus on using the Svelte compiler to learn HTML fundamentals and Svelte syntax.
 
@@ -56,7 +56,7 @@ Either set up your Svelte development environment locally with SvelteKit (recomm
 
 > Svelte is a superset of HTML.
 
-All valid HTML is valid Svelte, including plain text.
+Svelte is a superset of HTML, which means that valid HTML code can also be used in Svelte, including HTML tags and their corresponding semantics.
 
 ```html
 Hello world!
@@ -80,7 +80,7 @@ Ignore lines of code by using the HTML comment tag. In most code editors, the ke
 
 #### Common HTML tags and semantics
 
-HTML is a format that contains rich semantic information. Semantic HTML is HTML that is used to convey intended meaning to the browser (and to readers of your code).
+HTML contains rich semantic information that conveys intended meaning to both the browser and readers of your code.
 
 For example, the `h1` tag is used to indicate the most important heading on a page. The `h2` tag is used to indicate the second most important heading on a page. And so on until the `h6` tag.
 
@@ -349,7 +349,7 @@ Similarly to anchor tags, forms can be submitted to a web address. Instead of th
 
 #### Svelte superpowers
 
-We emphasize the "super" when we say "Svelte is a **superset** of HTML" because Svelte adds a few new features to HTML that make it even more powerful.
+We emphasize the "super" when we say "Svelte is a **super**set of HTML" because Svelte adds a few new features to HTML that make it even more powerful.
 
 ##### Conditionals
 
@@ -466,6 +466,10 @@ Svelte and SvelteKit have a lot of features that we didn't have time to cover. H
 - [Svelte slots](https://svelte.dev/docs#template-syntax-slot)
 - [Svelte transitions](https://svelte.dev/docs#run-time-svelte-transition)
 - [SvelteKit documentation](https://kit.svelte.dev/docs)
+
+## Final thoughts
+
+We hope you had a great time learning the basics of web development with Svelte in this workshop!
 
 ## Self learning references
 
