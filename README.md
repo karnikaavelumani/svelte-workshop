@@ -439,6 +439,33 @@ Import your Svelte component into another Svelte file.
 <Form />
 ```
 
+<details>
+<summary>(Optional) Define your own element attributes.</summary>
+
+In Svelte, component properties are defined using the `export` keyword.
+
+> EXERCISE: For example, you may want to define a `name` attribute for your form component.
+
+```svelte
+<!-- ./Form.svelte -->
+
+<script>
+  export let name;
+</script>
+```
+
+Component properties are used in the same way as HTML element attributes.
+
+```svelte
+<script>
+  import Form from "./Form.svelte";
+</script>
+
+<Form name="My Form" />
+```
+
+</details>
+
 ##### Svelte stores
 
 Svelte stores are reactive JavaScript variables that can be written to and read from any frontend file in your application.
